@@ -36,7 +36,19 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
+function finalResult(win, lose, draw) {
+  if (win > lose) {
+    return "Final Result: You are the Winner!!!"
+  }
+  else if (lose > win) {
+    return "Final Result: You have lost!!!"
+  }
+  else {
+    return "Final Result: It is a Draw!!!"
+  }
+}
 
+// run game() to run the actual game in browser console
 function game() {
   let win = 0;
   let lose = 0;
@@ -56,15 +68,7 @@ function game() {
           draw++
         }
     }
-  console.log(`Wins:${win}   Losses:${lose}   Draws:${draw}`)
-    if (win > lose) {
-      console.log("Final Result: You are the Winner!!")
-    }
-    else if (lose > win) {
-      console.log("Final Result: You have lost!!")
-    }
-    else {
-      console.log("Final Result: It is a Draw!!")
-    }
+    console.log(`Wins:${win}   Losses:${lose}   Draws:${draw}`)
+    console.log(finalResult(win, lose, draw))
 
 }
