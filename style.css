@@ -1,8 +1,12 @@
+body{
+    font-size: 25px;
+    font-family: sans-serif;
+}
+
 .btn1 {
     background-color: red;
     color: white;
     height: 70px;
-    width: 10%;
     margin-right: 40px;
     font-size: large;
 }
@@ -11,7 +15,6 @@
     background-color: blue;
     color: white;
     height: 70px;
-    width: 10%;
     font-size: large;
 }
 
@@ -19,18 +22,49 @@
     background-color: green;
     color: white;
     height: 70px;
-    width: 10%;
     margin-left: 40px;
     font-size: large;
 }
 
+.btn1, .btn2, .btn3 {
+    background-color: rgba(73,155,234,1);
+    box-shadow: 6px 13px 45px -13px rgba(0,0,0,0.66);
+    width: 20%;
+    height: 90px;
+    border-radius: 15px;
+    border: solid;
+    border-color: rgb(44, 110, 172);
+    color: black;
+}
+
 .container {
     display: flex;
-    justify-content: center;
-    margin-top: 80px;
+    justify-content: space-evenly;
+    padding-top: 80px;
 }
 
 #msg {
     text-align: center;
-    margin-top: 40px;
+    padding-top: 40px;
 }
+
+h1, h2{
+    text-align: center;
+  }
+
+h2 {
+    font-size: 33px ;
+}
+
+#endMsg {
+    text-align: center;
+    color: rgb(13, 10, 34); 
+
+
+}
+
+html {
+  max-width: 800px;
+  margin: auto;
+}
+
