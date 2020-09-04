@@ -19,6 +19,7 @@ function titleCase(str) {
   return str.join(' ');
 }
 
+let selection_msg = document.querySelector('#selection_msg');
 let msg = document.querySelector("#msg");
 const rockBtn = document.querySelector(".btn1"); 
 const paperBtn = document.querySelector(".btn2");
@@ -53,9 +54,10 @@ let draw = 0;
 
 function playRound(playerSelection, computerSelection) {
   endMsg.textContent = "";
+  selection_msg.textContent = `You selected ${titleCase(playerSelection)}. The CPU selected ${titleCase(computerSelection)}.`;
   let ps = playerSelection.toLowerCase();
   if (ps == computerSelection) {
-    msg.textContent = `It's a Draw! You both selected ${titleCase(computerSelection)}`;
+    msg.textContent = `It's a Draw!`;
     draw++;
     winsScore.textContent = `Player Score: ${win}`;
     drawsScore.textContent = `Draws: ${draw}`;
@@ -67,7 +69,7 @@ function playRound(playerSelection, computerSelection) {
     (ps == "paper" && computerSelection == "rock") ||
     (ps == "scissors" && computerSelection == "paper")
   ) {
-    msg.textContent = `You Win! ${titleCase(ps)} beats ${titleCase(computerSelection)}`
+    msg.textContent = `You Win!`
     win++
     winsScore.textContent = `Player Score: ${win}`;
     drawsScore.textContent = `Draws: ${draw}`;
@@ -82,7 +84,7 @@ function playRound(playerSelection, computerSelection) {
     
   }
   else {
-    msg.textContent = `You Lose! ${titleCase(computerSelection)} beats ${titleCase(ps)}`;
+    msg.textContent = `You Lose!`;
     lose++;
     winsScore.textContent = `Player Score: ${win}`;
     drawsScore.textContent = `Draws: ${draw}`;
