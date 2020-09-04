@@ -1,6 +1,7 @@
 # Rock Paper Scissors Game
 
-A simple rock paper scissors game with a user interface.
+- A simple rock paper scissors game 
+- Access at: https://daniel-chow-yc.github.io/rock-paper-scissors/
 
 ## Requirements:
 - Create three buttons, one for each selection. 
